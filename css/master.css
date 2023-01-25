@@ -4,6 +4,10 @@
     box-sizing: border-box;
 }
 
+html{
+    font-family: 'Noto Sans', sans-serif;
+}
+
 /* DEBUG */
 
 header.debug{
@@ -27,7 +31,6 @@ main.debug .row .col-1{
 }
 
 footer.debug{
-    background-color: darkslategray;
     height: 100px;
 }
 
@@ -37,8 +40,35 @@ footer.debug .col-1{
 
 /* DEBUG */
 
+/* COLORS */
+
+.text-light{color: white;}
+.text-red{color: red;}
+.text-orange{color: #FE6900;}
+
+.bg-red{color: red;}
+.bg-orange{color: #FE6900;}
+.bg-green{color: #FE6900;}
+
 
 /* LAYOUT */
+
+.nav-inline ul{
+    list-style-type: none;
+}
+
+.nav-inline ul li{
+    display: inline-block;
+}
+
+.nav-inline ul li a{
+    padding: 10px;
+    color: white;
+}
+
+.nav-inline ul li a:first-child{
+    padding-left: 0;
+}
 
 .nav-fix{
     padding-top: 60px;
@@ -70,6 +100,7 @@ footer.debug .col-1{
 header{
     position: fixed;
     width: 100%;
+    background-color: #FE6900;
 }
 
 .navbar{
@@ -79,14 +110,72 @@ header{
     align-items: center;
 }
 
+.navbar .navbar-nav ul li a{
+    text-decoration: none;
+    font-weight: bold;
+}
+
+
+.nav-logo > img{
+    height: 30px;
+}
+
+
+
 /* MAIN */
 
 main .container{
     padding: 60px 0px;
 }
 
+/* CARDS */
+
+.card{
+    padding: 20px;
+    background-color: bisque;
+}
+
+.card .card-brand{
+    font-size: .8rem;
+}
+
+.card .card-item{
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.card .price-now{
+    font-size: .8rem;
+    font-weight: bold;
+}
+
+.card .price-before{
+    font-size: .8rem;
+    text-decoration: line-through;
+}
+
+.card-img{
+    position: relative;
+}
+
+.card-img-front{
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+/* .card-img-front:hover{
+    display: none;
+} */
+
+
+.card .card-img img{
+    width: 100%;
+}
+
 /* FOOTER */
 
 footer{
     padding: 40px 0px;
+    background-color: #1a1a1a;
 }
