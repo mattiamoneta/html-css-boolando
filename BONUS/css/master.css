@@ -185,6 +185,10 @@ main .container{
     color: black;
 }
 
+.card-favourites a:hover{
+    color: #FE6900;
+}
+
 .card .card-caption{
     text-decoration: none;
     color: black;
