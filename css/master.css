@@ -2,6 +2,7 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    transition: all .1s ease;
 }
 
 html{
@@ -38,6 +39,8 @@ footer.debug .col-1{
     background-color: aqua;
 }
 
+
+
 /* DEBUG */
 
 /* COLORS */
@@ -46,9 +49,11 @@ footer.debug .col-1{
 .text-red{color: red;}
 .text-orange{color: #FE6900;}
 
-.bg-red{color: red;}
-.bg-orange{color: #FE6900;}
-.bg-green{color: #FE6900;}
+.bg-red{background-color: red;}
+.bg-orange{background-color: #FE6900;}
+.bg-green{background-color: #008000;}
+
+
 
 
 /* LAYOUT */
@@ -101,6 +106,7 @@ header{
     position: fixed;
     width: 100%;
     background-color: #FE6900;
+    z-index: 998;
 }
 
 .navbar{
@@ -132,7 +138,75 @@ main .container{
 
 .card{
     padding: 20px;
-    background-color: bisque;
+}
+
+.card-container{
+    position: relative;
+}
+
+
+
+
+.card-img{
+    position: relative;
+    
+}
+
+.card-img-front{
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: -1;
+}
+
+.card-img:hover .card-img-front{
+    z-index: 1;
+    opacity: 100;
+}
+
+.card-img:hover .card-img-back{
+    opacity: 0;
+}
+
+
+.card .card-img img{
+    width: 100%;
+}
+
+.card-favourites{
+    position: absolute;
+    right: 0px;
+    top: 20px;
+    z-index: 2;
+    background-color: white;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    line-height: 40px;
+    font-size: 1.3rem;
+}
+
+
+.card-badge{
+    position: absolute;
+    z-index: 2;
+    bottom: 40px;
+}
+
+.card-badge .badge{
+    font-size: .7rem;
+    font-weight: bold;
+    padding: 3px 8px;
+    text-transform: capitalize;
+}
+
+
+.card-favourites a{
+    color: black;
+}
+
+.card-favourites a:hover{
+    color: #FE6900;
 }
 
 .card .card-brand{
@@ -152,25 +226,6 @@ main .container{
 .card .price-before{
     font-size: .8rem;
     text-decoration: line-through;
-}
-
-.card-img{
-    position: relative;
-}
-
-.card-img-front{
-    position: absolute;
-    left: 0;
-    top: 0;
-}
-
-/* .card-img-front:hover{
-    display: none;
-} */
-
-
-.card .card-img img{
-    width: 100%;
 }
 
 /* FOOTER */
